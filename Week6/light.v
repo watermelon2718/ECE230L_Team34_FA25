@@ -6,6 +6,6 @@ module light(
     output light
 );
 
-    assign light = downstairs ^ upstairs
+    assign light = downstairs ^ upstairs;
 
 endmodule
