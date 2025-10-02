@@ -26,7 +26,7 @@ module top (
         .carry(carryOut1)   
     );
 
-    full_adder full_adder_inst1 (
+    full_adder full_adder_inst2 (
         .A(sw[5]),
         .B(sw[7]),
         .C(carryOut1),
