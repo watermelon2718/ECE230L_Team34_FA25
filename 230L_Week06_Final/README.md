@@ -30,3 +30,5 @@ In an adder, the XOR gate allows for the computation of the sum. According to th
 
 ### 3 - What is the largest number a two bit adder can handle? What happens when you go over?
 
+The largest number that a two bit adder can handle (that is, that which can be represented in the two bit sum) is 11 (or 3, in decimal). If you include the carry as part of the representation, you could say that the largest number the adder can support is 111 (7 in decimal). However, more properly, a two bit adder can only add together two bit numbers, and can only produce a sum of two bits. Summed numbers that exceed this value will cause rollover by the amount of excess (e.g., adding 11 and 1 will give the sum of 00).
+
