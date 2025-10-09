@@ -4,6 +4,6 @@ module half_sub (
 );
 
 assign Y = A ^ B;
-assign Borrow = B & !A;
+assign Borrow = B & ~A;
 
 endmodule
