@@ -39,8 +39,3 @@ module ones_complement (
 
 
 );
-
-
-
-
-// ABCD + EFGH
