@@ -27,8 +27,6 @@ The Half Adder from the last lab, whilst it operates similarly to the Half Subtr
 
 When we finish adding two numbers in one's complement form, if the final operation has a carry, that bit must be added to the least significant bit (LSB). This is called the end-around carry. The presence of the end-around carry makes one's complement hard to use and implement because it requires that two addition operations are performed. 
 
-### 3 - What is the edge case and problem with Two’s Complement number representation?
-
 
 
 ### 3 - What is the edge case and problem with Two’s Complement number representation?
