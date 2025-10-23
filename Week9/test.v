@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module test();
     wire [15:0] led;
     reg [15:0] sw;
@@ -50,7 +48,7 @@ module test();
                 // If your simulation stops here
                 // then your design fails the test!
                 $display("Failed test!");
-                $finish;
+                //$finish;
             end
         end
         #10 $finish;
