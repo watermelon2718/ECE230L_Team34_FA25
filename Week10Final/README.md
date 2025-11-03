@@ -11,6 +11,10 @@ In this lab, you learned about the basic building block of sequential circuits: 
 | Question 2 | Your answers to the question | 25% |
 | Question 3 | Your answers to the question | 25% |
 
+## Summary
+This lab demonstrated the principles of implementing memory circuits in Verilog. First, there was created a basic D-Latch able to store a single bit. After that, there was created a 4-byte memory system using two demultiplexers, four 8-bit D-latches, and a multiplexer. The demultiplexers and multiplexer all share selector signals, from 2 switches. The multiplexer determines which data set (from D-Latch byte memory units 1-4) is displayed in the output (mapped to LEDs 8-15). One of the demultiplexers distributes/routes the write signal (actuated by button C) to one of the four D-Latch memory units, while the other is used to route the data signals from 8 switches to the same memory unit.
+
+Key learnings in this lab include the constructing of basic memory circuits, such as SR and D latches, as well as the managing of multiple memory units via multiplexers and demultiplexers to successfully read/display and write data on command to different memory units.
 ## Lab Questions
 
 ###  Why can we not just use structural Verilog to implement latches?
@@ -31,3 +35,4 @@ Signals can be placed inside the parentheses with different combinations or keyw
 Ultimately, whenever the sensitivity list (the thing that comes after the @ operator, inside the parentheses) is triggered, the statements inside the always block will be exectued.
 
 ### What importance is memory to digital circuits?
+Memory is vitally important in digital circuits because it allows the storage of values for use at a later time. Without memory, none of the fundamental components of a computer (OS, software, storage) could exist. Various types of memory (SR latch, D-latch, etc.) allow for varying degrees of control over memory. For example, the D-latch has an enable input that determines whether or not data can be changed within the memory circuit. This feature protects data from wanton overwriting which could wreak havoc on, say, a computer system.
