@@ -12,7 +12,7 @@ module t_flipflop (
 //mux instance
 // takes T as enable switch, Q and NotQ as inputs
 mux #(1) mux_inst (
-    .data(T),
+    .sel(T),
     .A(Q),
     .B(NotQ),
 );
