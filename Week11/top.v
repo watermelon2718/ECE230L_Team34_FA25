@@ -15,7 +15,7 @@ module top(
         .T(sw[3]),
         .CLK(btnC),
         .Q(led[4]),
-        .Q(led[5])
+        .NotQ(led[5])
     );
 
 endmodule
