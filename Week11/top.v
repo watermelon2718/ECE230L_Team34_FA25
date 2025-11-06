@@ -1,21 +1,16 @@
 //copied from week 10
 
 module top(
-    input [15:0] sw,
+    input [3:0] sw,
     input btnC,
-    output [15:0] led
+    output [5:0] led
 );
-    d_latch part1(
-        .D(sw[0]),
+
+    d_flipflop d_flipflop_inst (
+        .D[sw[0]],
+        .CLK[btnC],
         .Q(led[0]),
-        .NotQ(led[1]),
-        .E(btnC)
-    );
-    memory_system part2(
-        .data(sw[15:8]),
-        .addr(sw[7:6]),
-        .store(btnC),
-        .memory(led)
+        .NotQ(led[1])
     );
 
 endmodule
