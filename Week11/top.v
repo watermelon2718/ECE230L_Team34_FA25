@@ -10,5 +10,12 @@ module top(
         .Q(led[0]),
         .NotQ(led[1])
     );
+    
+    t_flipflop t_flipflop_inst (
+        .T(sw[3]),
+        .CLK(btnC),
+        .Q(led[4]),
+        .Q(led[5])
+    );
 
 endmodule

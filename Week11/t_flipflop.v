@@ -14,7 +14,7 @@ module t_flipflop (
 mux #(1) mux_inst (
     .sel(T),
     .A(Q),
-    .B(NotQ),
+    .B(NotQ)
 );
 
 //dflipflop instance
