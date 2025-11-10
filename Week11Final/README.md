@@ -13,7 +13,7 @@ In this lab, you’ve learned about edge sensitive circuits and explored some of
 
 ## Lab Questions
 
-###Summary
+### Summary
 This lab taught the students about flipflops and synchronous logic, memory, and state machines. This included learnings regarding level vs. edge sensitive circuits, which respectively respond to change in signal at any point in the clock cycle, or just at an edge (such as positive edge). It was discussed how it does not work to just put the clock signal in the sensitivity list for a behavioural implementation to make an actual edge sensitive circuit, but rather the posedge keyword is required.
 
 Furthermore, there was discussed the application of edge triggered circuits for making clocked circuits, which are circuits that depend on a clock signal that toggles at a fixed frequency. The importantce of initial state was discussed as well.
