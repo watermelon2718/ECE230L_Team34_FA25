@@ -1,5 +1,6 @@
 module d_flipflop (
     input D, CLK,
+    input RESET,
     output reg Q,
     output NotQ
 );
@@ -8,7 +9,7 @@ module d_flipflop (
     end
 
     always @(posedge CLK) begin
-        Q <= D;
+        Q <= RESET ? 0 : D;
     end
 
     assign NotQ = ~Q; 
