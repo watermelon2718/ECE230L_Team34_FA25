@@ -6,10 +6,10 @@ module top(
 //ripple counter and modulo divider inst here
 
 ripple_counter ripple_counter_inst (
-        .T(sw[3]),
         .CLK(btnC),
-        .Q(led[4]),
-        .NotQ(led[5])
+        .Q0(led[0]),
+        .Q1(led[1]),
+        .Q2(led[2])
     );
 
 endmodule
