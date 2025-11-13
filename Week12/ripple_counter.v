@@ -1,5 +1,3 @@
-//do I need a reset input?
-
 module ripple_counter (
     input CLK,
     output Q0, Q1, Q2
