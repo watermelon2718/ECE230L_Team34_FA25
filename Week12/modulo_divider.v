@@ -10,15 +10,15 @@
 
 module modulo_divider (
     input CLK, RESET,
-    output [3:0] led
+    output [6:3] led
 );
     wire carryOut1, carryOut2;
     wire Y0, Y1, Y2;
     wire nuke;
     wire CmpReset;
+    wire D;
 
-
-    wire Q0, Q1, Q2;
+    wire Q0, Q1, Q2, Qout;
 
 // 3-bit adder - compute n + 1
 //TODO: change inputs/outputs
@@ -73,10 +73,24 @@ module modulo_divider (
         .NotQ(nuke),
         .RESET(CmpReset)
     );
-assign CmpReset = Q2 & Q0;
-//Detection mechanism -- hook up to output bits
-// count 0 - 5 = modulo 6
-// Q2 Q1 Q0 = 101
-// if Q2 AND Q0 -> reset
+
+    d_flipflop DFFFinal (
+        .D(D),
+        .CLK(CLK),
+        .Q(Qout),
+        .NotQ(nuke),
+        .RESET(1)
+
+    );
+
+assign CmpReset = (Q2 & Q0);
+assign D = CmpReset ^ Qout;
+
+assign led[3] = Q0;
+assign led[4] = Q1;
+assign led[5] = Q2;
+assign led[6] = Qout;
+
+
 
 endmodule
