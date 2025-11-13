@@ -52,21 +52,21 @@ module modulo_divider (
         .D(Y0),
         .CLK(CLK),
         .Q(Q0),
-        .NotQ(notQ0)
+        .NotQ(nuke)
     );
 
     d_flipflop DFF1 (
         .D(Y1),
         .CLK(CLK),
         .Q(Q1),
-        .NotQ(notQ1)
+        .NotQ(nuke)
     );
 
     d_flipflop DFF2 (
         .D(Y2),
         .CLK(CLK),
         .Q(Q2),
-        .NotQ(notQ2)
+        .NotQ(nuke)
     );
 
 //Detection mechanism -- hook up to output bits
