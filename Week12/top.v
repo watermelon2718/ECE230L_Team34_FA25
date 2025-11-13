@@ -5,7 +5,7 @@ module top(
 
 //ripple counter and modulo divider inst here
 
-ripple_counter ripple_counter_inst (
+    ripple_counter ripple_counter_inst (
         .CLK(btnC),
         .Q0(led[0]),
         .Q1(led[1]),
