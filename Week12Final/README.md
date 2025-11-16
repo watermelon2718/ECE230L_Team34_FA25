@@ -13,7 +13,14 @@ In this lab, we learned how to make clock dividers from two types of counters.
 
 ## Lab Questions
 
+### Summary
+This lab involved the implementation of two clock dividers. The first was a modulo counter, which required a set of adders, D-flipflops, and comparator logic to count between 0 and 5 (modulo 6). The adders increment the value stored by 1, while the D-flipflops store the current sum. All of the D-flipflops are driven by the same clock. A synchronous reset (driven by detection of the output value 5) and an asynchronous reset (driven by a button press) were also implemented.
+
+The second clock divider was a ripple counter, created using a series of t-flipflops. The output (Q) of the first T-flipflop drives the clock of the next T-flipflop. Chaining N T-flipflops will divide the input clock by 2^N. The T-flipflop also includes a reset input.
+
 ### 1 - Why does the Modulo Counter actually divide clocks by 2 * Count?
+The modulo counter divides the clock by 2 * count because the output toggles each time the desired count is reached. One Hz encompasses a transition from high to low and back to high. So two counts are required per one Hz.
+
 
 ### 2 - Why does the ring counter's output go to all 1s on the first clock cycle?
 I presume this question is referring to the ripple counter, since there were no ring counters employed in the lab (https://bsuece230l.github.io/classes/counters_and_dividers/index.html)

@@ -7,7 +7,6 @@ module modulo_divider (
     wire SYNC_RESET;
     wire D;
 // 3-bit adder - compute n + 1
-//TODO: change inputs/outputs
     full_adder full_adder_inst0 (
         .A(Q0),
         .B(0), 
@@ -33,7 +32,6 @@ module modulo_divider (
 
 
 // d flipflops - store count
-//TODO: change D to bit values out of adder
 
     d_flipflop DFF0 (
         .D(Y0& ~SYNC_RESET),
