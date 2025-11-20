@@ -5,6 +5,12 @@ module top(
     input btnU // reset
 );
 
-    // Hook up binary and one-hot state machines
+    binary binary_inst(
+        .w(sw),
+        .clk(btnC),
+        //reset?
+        .z(led[1]),
+        .state(led[9:7])
+    );
 
 endmodule

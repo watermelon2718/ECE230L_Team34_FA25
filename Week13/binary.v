@@ -1,6 +1,7 @@
 module binary(
     input w,
     input clk,
+    output [2:0] state, //is this right?
     output z
 );
 
@@ -30,6 +31,7 @@ module binary(
     assign Next[0] = ~w & ((~State[0] & ~State[1]) + (State[0] & State[1])) + (w & State[2]) & (~State[0] + ~State[1]); //probably wrong haha
     assign Next[1] = ~State[1] & State[0] + State[1] & ~State[0] + ~State[1] & w & ~State[2];
     assign Next[2] = w & (State[2] + State[1] & State [0]);
+    assign state = State; // help
 
 endmodule
 
